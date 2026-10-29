@@ -100,7 +100,7 @@ export default function HomeScreen() {
         ItemSeparatorComponent={() => <View style={{ height: Spacing.three }} />}
         ListHeaderComponent={header}
         ListEmptyComponent={empty}
-        contentContainerStyle={{ paddingTop: insets.top, paddingBottom: insets.bottom + 56, paddingHorizontal: Spacing.three }}
+        contentContainerStyle={{ paddingTop: insets.top, paddingBottom: insets.bottom + 56, paddingHorizontal: Spacing.two }}
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled"
         refreshControl={<RefreshControl refreshing={feed.refreshing} onRefresh={feed.reload} tintColor={theme.link} colors={[theme.primary]} progressViewOffset={insets.top} />}
@@ -123,7 +123,7 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  flex: { flex: 1 },
+  flex: { flex: 1, },
   header: { gap: Spacing.three, paddingBottom: Spacing.three },
   topRow: { flexDirection: 'row', alignItems: 'center', gap: Spacing.three },
   fabWrap: { position: 'absolute', right: Spacing.three },

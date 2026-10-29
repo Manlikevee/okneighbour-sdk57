@@ -20,9 +20,10 @@ type Props = {
   index?: number;
   /** Hide the author row (e.g. on a profile where the author is obvious). */
   hideAuthor?: boolean;
+  fullview?: boolean;
 };
 
-export function PostCard({ post, openable = true, index = 0, hideAuthor }: Props) {
+export function PostCard({ post, openable = true, index = 0, hideAuthor, fullview }: Props) {
   const theme = useTheme();
   const name = fullName(post.user);
   const profileRef = post.user?.profile?.profile_ref;
@@ -60,7 +61,7 @@ export function PostCard({ post, openable = true, index = 0, hideAuthor }: Props
       )}
 
       <RichText html={post.content} />
-      <PostMedia media={post.images} />
+      <PostMedia media={post.images} fullview={fullview} />
 
       <View style={styles.footer}>
         <View style={styles.stat} accessible accessibilityLabel={`${likes} likes`}>

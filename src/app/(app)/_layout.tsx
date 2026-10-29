@@ -22,4 +22,5 @@ export default function AppLayout() {
       <Stack.Screen name="edit-profile" options={{ title: 'Edit profile', presentation: 'fullScreenModal', animation: 'slide_from_bottom', contentStyle: { backgroundColor: theme.background } }} />
     </Stack>
   );
+  
 }

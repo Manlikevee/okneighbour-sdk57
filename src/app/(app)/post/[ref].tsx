@@ -77,7 +77,7 @@ export default function PostScreen() {
           <ErrorState message={post.error} onRetry={post.reload} />
         ) : post.data ? (
           <>
-            <PostCard post={post.data} openable={false} />
+            <PostCard post={post.data} openable={false} fullview />
             <View style={styles.commentsHead}>
               <ThemedText type="subtitle" style={{ fontSize: 19 }} accessibilityRole="header">
                 Comments
